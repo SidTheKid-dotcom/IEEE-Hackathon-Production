@@ -72,7 +72,7 @@ const StarterPokemonPage: React.FC = () => {
                 const token = JSON.parse(String(localStorage.getItem('token')));
                 if (!token) return;
 
-                const response = await axios.get('https://ieee-hackathon-pokedex-backend.vercel.app/getChosenPokemon', {
+                const response = await axios.get('https://ieee-hackathon-production-frontend.vercel.app/getChosenPokemon', {
                     headers: {
                         Authorization: token,
                         'Content-Type': 'application/json',
@@ -127,7 +127,7 @@ const StarterPokemonPage: React.FC = () => {
             }
 
             const response = await axios.post(
-                'https://ieee-hackathon-pokedex-backend.vercel.app/findYourPokemon',
+                'https://ieee-hackathon-production-frontend.vercel.app/findYourPokemon',
                 { counts },
                 {
                     headers: {

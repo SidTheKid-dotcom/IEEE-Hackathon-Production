@@ -26,7 +26,7 @@ const FavouritePage: React.FC = () => {
                     return;
                 }
 
-                const response = await axios.get('https://ieee-hackathon-pokedex-backend.vercel.app/getFavourites', {
+                const response = await axios.get('https://ieee-hackathon-production-frontend.vercel.app/getFavourites', {
                     headers: {
                         Authorization: token,
                         'Content-Type': 'application/json',

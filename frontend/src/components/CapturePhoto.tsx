@@ -33,7 +33,7 @@ const CameraCaptureUpload: React.FC = () => {
 
   const uploadFile = async (formData: FormData) => {
     try {
-      const response = await fetch('https://ieee-hackathon-pokedex-backend.vercel.app/upload', {
+      const response = await fetch('https://ieee-hackathon-production-frontend.vercel.app/upload', {
         method: 'POST',
         body: formData,
       });
