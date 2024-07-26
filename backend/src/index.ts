@@ -24,7 +24,7 @@ interface AuthRequest extends Request {
 
 // Use CORS middleware
 const corsOptions = {
-    origin: 'https://ieee-hackathon-pokedex.vercel.app', // Replace with your frontend URL
+    origin: 'https://ieee-hackathon-production-frontend.vercel.app', // Replace with your frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 };
