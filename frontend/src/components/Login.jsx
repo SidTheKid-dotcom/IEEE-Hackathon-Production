@@ -37,7 +37,7 @@ const LoginPage = () => {
     if (formType === 'login') {
       const loginRequest = async () => {
         try {
-          const response = await axios.post('https://ieee-hackathon-production-frontend.vercel.app/signin', {
+          const response = await axios.post('https://ieee-hackathon-production-backend.vercel.app/signin', {
             email: formData.email,
             password: formData.password
           }, {
@@ -61,7 +61,7 @@ const LoginPage = () => {
       // Perform signup logic here
       const registerRequest = async () => {
         try {
-          const response = await axios.post('https://ieee-hackathon-production-frontend.vercel.app/signup', {
+          const response = await axios.post('https://ieee-hackathon-production-backend.vercel.app/signup', {
             username: formData.email,
             email: formData.email,
             password: formData.password

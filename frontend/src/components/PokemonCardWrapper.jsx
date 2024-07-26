@@ -32,7 +32,7 @@ const PokemonCardWrapper = () => {
 
         const token = JSON.parse(String(localStorage.getItem('token')));
 
-        const userActions = await axios.get(`https://ieee-hackathon-production-frontend.vercel.app/getInfo/${id}`, {
+        const userActions = await axios.get(`https://ieee-hackathon-production-backend.vercel.app/getInfo/${id}`, {
           headers: {
             Authorization: token,
             'Content-Type': 'application/json'
@@ -82,7 +82,7 @@ const PokemonCardWrapper = () => {
       const pokemonId = Number(id);
 
       if (token) {
-        const commentResponse = await axios.post('https://ieee-hackathon-production-frontend.vercel.app/commentPokemon', {
+        const commentResponse = await axios.post('https://ieee-hackathon-production-backend.vercel.app/commentPokemon', {
           pokemon_id: pokemonId,
           comment: comments
         }, {
@@ -112,7 +112,7 @@ const PokemonCardWrapper = () => {
     const pokemonId = Number(id);
 
     if (token) {
-      const rateResponse = await axios.post('https://ieee-hackathon-production-frontend.vercel.app/ratePokemon', {
+      const rateResponse = await axios.post('https://ieee-hackathon-production-backend.vercel.app/ratePokemon', {
         pokemon_id: pokemonId,
         rating: star
       }, {
@@ -147,7 +147,7 @@ const PokemonCardWrapper = () => {
 
     if (token) {
       if (isFavorite) {
-        await axios.delete('https://ieee-hackathon-production-frontend.vercel.app/removeFavouritePokemon', {
+        await axios.delete('https://ieee-hackathon-production-backend.vercel.app/removeFavouritePokemon', {
           headers: {
             Authorization: token,
             'Content-Type': 'application/json'
@@ -159,7 +159,7 @@ const PokemonCardWrapper = () => {
 
         setIsFavorite(false);
       } else {
-        const favResponse = await axios.post('https://ieee-hackathon-production-frontend.vercel.app/addFavouritePokemon', {
+        const favResponse = await axios.post('https://ieee-hackathon-production-backend.vercel.app/addFavouritePokemon', {
           pokemon_id: pokemonId,
           pokemon_name: pokemonName,
         }, {
